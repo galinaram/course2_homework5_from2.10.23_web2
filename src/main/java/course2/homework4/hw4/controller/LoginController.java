@@ -16,7 +16,6 @@ public class LoginController {
     }
     @GetMapping()
     public String login (@RequestParam("login") String login, @RequestParam("password") String password, @RequestParam("confirmPassword") String confirmPassword) {
-//        return "login: " + login;
         return loginService.rightLogin(login, password, confirmPassword);
     }
 }
